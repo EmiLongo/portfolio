@@ -1,13 +1,16 @@
-import AboutMe from "./AboutMe"
+import AboutMeComponent from "./AboutMeComponent"
 import HeroComponent from "./HeroComponent"
-
-const portfolio = () => {
+import ProjectsComponent from "./ProjectsComponent"
+import NavBarComponent from "./NavBarComponent"
+const Portfolio = () => {
   return (
     <div className="portfolio">
+        <NavBarComponent />
         <HeroComponent />
-        <AboutMe />
+        <AboutMeComponent />
+        <ProjectsComponent />
     </div>
   )
 }
 
-export default portfolio
+export default Portfolio

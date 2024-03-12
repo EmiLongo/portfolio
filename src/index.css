@@ -1,3 +1,22 @@
 :root {
+  --color-bg-primary: #182229;
+  --color-bg-sec: #2a3942;
+  --color-bg-ter: #36444d;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: calc(16px + 0.25vw);
+  background-color: var(--color-bg-sec);
+  color: azure;
+    .portfolio{
+      height: 100dvh;
+      width: 100dvw;
+      
+    }
+    h1{
+      transform: translateX(-150vw);
+      height: 0em;
+      margin: 0;
+      padding: 0;
+    }
 }

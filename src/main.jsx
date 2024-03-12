@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
+import Portfolio from './componentes/Portfolio'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <h1>Portfolio del más grande!</h1>
+    <Portfolio />
   </React.StrictMode>,
 )
