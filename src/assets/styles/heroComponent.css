@@ -15,6 +15,7 @@
         border-radius: 50%;
         overflow: hidden;
         background-color: var(--color-bg-ter);
+        z-index: 2;
             img{
                 width: 100%;
             }
@@ -37,13 +38,13 @@
     }
     .hero-bg{
         position: absolute;
-        top: 0em;
-        left: 0;
-        background: url('../img/hero-bg.jpg');
+        top: 50%;
+        transform: translateY(-50%);
+        right: 60%;
+        background: url('../img/hero-bg.webp');
         background-size: cover;
         height: 70dvh;
         aspect-ratio: 1/1;
-        z-index: -1;
         border-radius: 70% 30% 30% 70% / 70% 70% 30% 30% ;
         overflow: hidden;
 

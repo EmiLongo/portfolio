@@ -6,9 +6,7 @@ import cvemi from '../assets/CV-Emiliano Longo-SP-EN.pdf'
 const HeroComponent = () => {
   return (
     <div className="hero-component">
-        <div className='hero-bg-container'>
-          <div className='hero-bg'><div className='hero-bg-filter'></div></div>
-        </div>
+        <div className='hero-bg'><div className='hero-bg-filter'></div></div>
         <div className='img-container'>
           <div className='img-profile'>
             <img src={emiliano} alt="Foto de Emiliano" className='slide-top'/>
@@ -22,8 +20,12 @@ const HeroComponent = () => {
               <a download='CV-Emiliano-Longo-ES-EN.pdf' href={cvemi}>
                 <button>Descargar CV</button>
               </a>
-              <img src={logoGitHub} alt="Perfil GitHub" width='32' />
-              <img src={logoLinkedIn} alt="Perfil LinkedIn" width='32' />
+              <a href="https://github.com/EmiLongo">
+                <img src={logoGitHub} alt="Perfil GitHub" width='32' />
+              </a>
+              <a href="https://www.linkedin.com/in/emilianojlongo/">
+                <img src={logoLinkedIn} alt="Perfil LinkedIn" width='32' />
+              </a>
           </div>
         </div>
     </div>

@@ -3,6 +3,8 @@ import HeroComponent from "./HeroComponent"
 import ProjectsComponent from "./ProjectsComponent"
 import NavBarComponent from "./NavBarComponent"
 import ArrowComponent from "./ArrowComponent"
+import Guides from "./Guides"
+import FooterComponent from "./FooterComponent"
 const Portfolio = () => {
   return (
     <div className="portfolio">
@@ -12,6 +14,8 @@ const Portfolio = () => {
         <ArrowComponent />
         <AboutMeComponent />
         <ProjectsComponent />
+        <Guides />
+        <FooterComponent />
     </div>
   )
 }
