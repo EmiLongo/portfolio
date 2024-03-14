@@ -15,7 +15,15 @@ const NavBar = () => {
     <div className="nav-bar">
         <div className='nav-bar-bg'></div>
         <div className="nav-bar-logo">
-            <img src="" alt="Logo Emiliano" />
+            <div className='nav-bar-logo-text'
+                  onClick={() => {
+                      window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                      })
+                    } }
+            >
+            emi.dev</div>
         </div>
         {/* <div className='nav-bar-contact'>
             <button>Descargar CV</button>

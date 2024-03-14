@@ -6,10 +6,14 @@ import cvemi from '../assets/CV-Emiliano Longo-SP-EN.pdf'
 const HeroComponent = () => {
   return (
     <div className="hero-component">
-        <div className='img-profile'>
-          <img src={emiliano} alt="Foto de Emiliano" />
+        <div className='hero-bg-container'>
+          <div className='hero-bg'><div className='hero-bg-filter'></div></div>
         </div>
-        <h1>Desarrolador Web en Rosario, Emiliano Longo</h1>
+        <div className='img-container'>
+          <div className='img-profile'>
+            <img src={emiliano} alt="Foto de Emiliano" className='slide-top'/>
+          </div>
+        </div>
         <div className='hero-text'>
           <h4>Hola!</h4>
           <h2><i>Soy</i> Emiliano Longo</h2>
@@ -22,7 +26,6 @@ const HeroComponent = () => {
               <img src={logoLinkedIn} alt="Perfil LinkedIn" width='32' />
           </div>
         </div>
-        <div className='bg-circle'></div>
     </div>
   )
 }
