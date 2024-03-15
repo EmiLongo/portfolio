@@ -1,0 +1,42 @@
+aside{
+    font-size: 0.6em;
+    position: fixed;
+    top: 50dvh;
+    transform: translateY(calc(-50% - 1.5rem));
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .aside-item{
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        transition: 0.3s all ease-out;
+        cursor: pointer;
+        &:hover{
+            color: #9cffc5;
+            .aside-line{
+                width: 27px;
+                border: 1px solid #9cffc5;
+            }
+        }
+        .aside-line{
+            width: 20px;
+            border: 1px solid azure;
+            transform: translateY(1px);
+            transition: 0.3s all ease-out;
+        }
+    }
+    .isactive{
+        font-size: 1rem;
+        color: #9cffc5;
+        .aside-line{
+            width: 27px;
+            border: 1px solid #9cffc5;
+        }
+    }
+    @media (max-width: 1023.9px){
+        display: none;
+    }
+}

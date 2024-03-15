@@ -4,9 +4,13 @@
     align-items: last baseline;
     width: 60px;
     position: absolute;
-    right: 2.5em;
+    left: 1.2rem;
     bottom: 1em;
     transform: scale(0.6);
+    transition: 0.3s all ease-in;
+}
+.scrolled{
+  transform: translateX(-5rem);
 }
 .mouse_scroll {
   --mouse-scroll-color:#a7d4ab;

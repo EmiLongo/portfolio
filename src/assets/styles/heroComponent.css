@@ -4,10 +4,14 @@
     height: calc(100dvh - 3em);
     position: relative;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     
+    .img-container{
+        width: 320px;
+    }
     .img-profile{
         display: flex;
         width: min(200px, 70dvw);
@@ -40,7 +44,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 60%;
+        right: 0;
         background: url('../img/hero-bg.webp');
         background-size: cover;
         height: 70dvh;

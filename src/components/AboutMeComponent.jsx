@@ -1,7 +1,7 @@
 import '../assets/styles/aboutMeComponent.css'
 const AboutMeComponent = () => {
   return (
-    <div className="aboutme">
+    <div className="aboutme" id="aboutMeSection">
         <h3>Acerca de mí</h3>
         <div className="aboutme-text">
             <h4>Todo lo que imaginas <i>lo puedes programar</i></h4>

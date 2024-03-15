@@ -12,7 +12,7 @@ const NavBar = () => {
     setIsDarkTheme(!isDarkTheme)
   }
   return (
-    <div className="nav-bar">
+    <nav className="nav-bar">
         <div className='nav-bar-bg'></div>
         <div className="nav-bar-logo">
             <div className='nav-bar-logo-text'
@@ -39,7 +39,7 @@ const NavBar = () => {
             <img src={iconLanguage} alt="Toogle Language" width='32' />
         </div>
 
-    </div>
+    </nav>
   )
 }
 

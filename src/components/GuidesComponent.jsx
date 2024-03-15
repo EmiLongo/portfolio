@@ -1,6 +1,6 @@
-const Guides = () => {
+const GuidesComponent = () => {
   return (
-    <div className="guide"><h3>Fuentes de Inspiracion y aprendizaje</h3>
+    <div className="guides" id="guidesSection"><h3>Fuentes de Inspiracion y aprendizaje</h3>
       <div className="guide-card">1</div>
       <div className="guide-card">2</div>
       <div className="guide-card">3</div>
@@ -17,4 +17,4 @@ const Guides = () => {
   )
 }
 
-export default Guides
+export default GuidesComponent

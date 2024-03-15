@@ -1,6 +1,6 @@
 const ProjectsComponent = () => {
   return (
-    <div className="projects">
+    <div className="projects" id="projectsSection">
       <a href="https://zara-clone-reactjs.netlify.app/" target="_blank"><div className="project-card">
       DESARROLLADOR WEB SIMULACIÓN NO-COUNTRY
       Proyecto Clone de la Tienda de ropa Zara.
