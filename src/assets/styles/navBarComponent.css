@@ -24,10 +24,12 @@
             filter: invert(100%);
         }
         .nav-bar-logo{
+            user-select: none;
             margin-left: 2rem;
             flex: 1;
             position: fixed;
             font-family: "Roboto Mono", monospace;
+            cursor: pointer;
         }
         /* .nav-bar-contact{
             flex: 3;

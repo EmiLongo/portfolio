@@ -1,0 +1,10 @@
+.projects{
+    max-width: min(1024px, 97dvw);
+    margin: 0 auto;
+}
+@media (min-width: 1024px) {
+    .projects{
+
+        width: calc(620px);
+    }
+}

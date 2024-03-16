@@ -14,7 +14,7 @@ const AsideComponent = () => {
   useEffect(() => {
     const aboutMeSection = document.getElementById('aboutMeSection');
     const projectsSection = document.getElementById('projectsSection');
-    const aboutMePosition = aboutMeSection.offsetTop - 3 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const aboutMePosition = aboutMeSection.offsetTop - 6 * parseFloat(getComputedStyle(document.documentElement).fontSize);
     const projectsPosition = projectsSection.offsetTop - 3 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
     const handleScroll = () => {

@@ -3,6 +3,8 @@
   --color-bg-sec: #2a3942;
   --color-bg-ter: #36444d;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  width: 100dvw;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-size: calc(16px + 0.25vw);
@@ -13,7 +15,7 @@
       padding: 0;
     }
     .portfolio{
-      width: 100dvw;
+
       background-image: linear-gradient(to left top, #2a3942, #2d3d46, #30414b, #34454f, #374954,
        #364752, #34454f, #33434d, #2c3a44, #25323b, #1f2a32, #182229);
 

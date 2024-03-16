@@ -5,7 +5,10 @@ import logoLinkedIn from '../assets/img/linkedin.svg'
 import cvemi from '../assets/CV-Emiliano Longo-SP-EN.pdf'
 const HeroComponent = () => {
   return (
-    <div className="hero-component">
+    <div className="hero-component"><div className="hero-component-filter">
+        <div className='hero-bg-container'>
+          <div className='hero-bg'><div className='hero-bg-filter'></div></div>
+        </div>
         <div className='img-container'>
           <div className='img-profile'>
             <img src={emiliano} alt="Foto de Emiliano" className='slide-top'/>
@@ -27,8 +30,7 @@ const HeroComponent = () => {
               </a>
           </div>
         </div>
-        <div className='hero-bg'><div className='hero-bg-filter'></div></div>
-    </div>
+    </div></div>
   )
 }
 

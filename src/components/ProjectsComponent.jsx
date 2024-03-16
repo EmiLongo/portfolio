@@ -1,3 +1,4 @@
+import '../assets/styles/projectsComponent.css'
 const ProjectsComponent = () => {
   return (
     <div className="projects" id="projectsSection">
