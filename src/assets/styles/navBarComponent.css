@@ -46,7 +46,7 @@
             margin-right: 2rem;
             display: flex;
             justify-content: end;
-            gap: 0.8rem;
+            gap: 1rem;
             img{
                 cursor: pointer;
                 transition: 0.3s all ease-out;
@@ -56,7 +56,28 @@
                 drop-shadow(0 0 10px #00ff6a);
                 transform: scale(1.2);
             }
+            .nav-bar-language:hover > img {
+                filter: invert(100%)
+                drop-shadow(0 0 10px #00ff6a);
+                transform: scale(1.2);
+            }
+            .nav-bar-language:hover > span {
+                text-shadow: 0 0 10px #00ff6a;
+            }
+            .nav-bar-language{
+                span{
+                    display: inline-block;
+                    width: 1rem;
+                    font-size: 0.8rem;
+                    cursor: pointer;
+                    margin-left: 0.2rem;
+                    transition: 0.3s all ease-out;
+                }
+
+            }
         }
+}
+@media (min-width: 1024px){
 
 
 }

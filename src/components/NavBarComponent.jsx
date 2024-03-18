@@ -4,12 +4,19 @@ import '../assets/styles/navBarComponent.css'
 import iconLight from '../assets/img/mode-light.svg'
 import iconDark from '../assets/img/mode-dark.svg'
 import iconLanguage from '../assets/img/language.svg'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import LanguageContext from '../assets/context/LanguageContext'
 const NavBar = () => {
-
+  const { handleLanguange } = useContext(LanguageContext)
+  const [languageSel, setLanguageSel] = useState('ES')
   const [isDarkTheme, setIsDarkTheme] = useState(true)
   const handleTheme = () => {
     setIsDarkTheme(!isDarkTheme)
+  }
+  const handleClick = () => {
+    const language = languageSel === 'ES' ? 'EN' : 'ES';
+    setLanguageSel(language);
+    handleLanguange(language); 
   }
   return (
     <nav className="nav-bar">
@@ -36,7 +43,10 @@ const NavBar = () => {
                 onClick={handleTheme}
                 width='32'
             />
-            <img src={iconLanguage} alt="Toogle Language" width='32' />
+            <div className='nav-bar-language' onClick={handleClick}>
+              <img src={iconLanguage} alt="Toogle Language" width='32' />
+              <span>{languageSel}</span>
+            </div>
         </div>
 
     </nav>

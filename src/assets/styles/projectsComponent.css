@@ -1,6 +1,29 @@
 .projects{
     max-width: min(1024px, 97dvw);
     margin: 0 auto;
+    h3{
+        text-align: center;
+    }
+    .project-card{
+        display: flex;
+        gap: 1rem;
+        .project-details{
+            flex: 1;
+        }
+        .project-view{
+            flex: 1;
+        }
+        .project-imgs-body{
+            display: flex;
+        }
+        .project-imgs-footer{
+            display: flex;
+            gap: 1rem;
+            img{
+                filter: invert(100%)
+            }
+        }
+    }
 }
 @media (min-width: 1024px) {
     .projects{

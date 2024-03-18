@@ -1,7 +1,8 @@
-import { useState ,useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import '../assets/styles/asideComponent.css'
-
+import LanguageContext from '../assets/context/LanguageContext'
 const AsideComponent = () => {
+  const { texts } = useContext(LanguageContext)
   const [isActiveAboutMe, setIsActiveAboutMe] = useState(false);
   const [isActiveProjects, setIsActiveProjects] = useState(false);
 
@@ -46,19 +47,19 @@ const AsideComponent = () => {
           onClick={()=>handleClick('aboutMeSection')}
         >
             <div className="aside-line"></div>
-            <span>SOBRE MI</span>
+            <span>{texts.asideAboutMe}</span>
         </div>
         <div className={`aside-item ${isActiveProjects ? 'isactive' : ''}`}
           onClick={()=>handleClick('projectsSection')}
         >
             <div className="aside-line"></div>
-            <span>PROYECTOS</span>
+            <span>{texts.asideProjects}</span>
         </div>
         <div className="aside-item"
         onClick={()=>handleClick('guidesSection')}
         >
             <div className="aside-line"></div>
-            <span>INSPIRACIÓN</span>
+            <span>{texts.asideInspiration}</span>
         </div>
     </aside>
   )

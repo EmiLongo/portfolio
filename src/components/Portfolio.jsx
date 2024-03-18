@@ -6,19 +6,22 @@ import ArrowComponent from "./ArrowComponent"
 import GuidesComponent from "./GuidesComponent"
 import FooterComponent from "./FooterComponent"
 import AsideComponent from "./AsideComponent"
+import { LanguageProvider } from "../assets/context/LanguageContext"
 
 const Portfolio = () => {
   return (
     <div className="portfolio">
         <h1>Desarrolador Web en Rosario, Emiliano Longo</h1>
-        <NavBarComponent />
-        <AsideComponent />
-        <HeroComponent />
-        <ArrowComponent />
-        <AboutMeComponent />
-        <ProjectsComponent />
-        <GuidesComponent />
-        <FooterComponent />
+        <LanguageProvider>
+          <NavBarComponent />
+          <HeroComponent />
+          <AsideComponent />
+          <AboutMeComponent />
+        </LanguageProvider>
+          <ProjectsComponent />
+          <GuidesComponent />
+          <FooterComponent />
+          <ArrowComponent />
     </div>
   )
 }
