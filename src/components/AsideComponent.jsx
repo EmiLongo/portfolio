@@ -5,6 +5,7 @@ const AsideComponent = () => {
   const { texts } = useContext(LanguageContext)
   const [isActiveAboutMe, setIsActiveAboutMe] = useState(false);
   const [isActiveProjects, setIsActiveProjects] = useState(false);
+  const [isActiveGuides, setIsActiveGuides] = useState(false);
 
   const handleClick = (id) => {
     const section = document.getElementById(id);
@@ -15,8 +16,10 @@ const AsideComponent = () => {
   useEffect(() => {
     const aboutMeSection = document.getElementById('aboutMeSection');
     const projectsSection = document.getElementById('projectsSection');
+    const guidesSection = document.getElementById('guidesSection');
     const aboutMePosition = aboutMeSection.offsetTop - 6 * parseFloat(getComputedStyle(document.documentElement).fontSize);
     const projectsPosition = projectsSection.offsetTop - 3 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const guidesPosition = guidesSection.offsetTop - 3 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
     const handleScroll = () => {
       const currentScrollPosition = window.scrollY;
@@ -24,9 +27,15 @@ const AsideComponent = () => {
       if (currentScrollPosition >= aboutMePosition && currentScrollPosition < projectsPosition) {
         setIsActiveAboutMe(true);
         setIsActiveProjects(false);
-      } else if (currentScrollPosition >= projectsPosition) {
+        setIsActiveGuides(false)
+      } else if (currentScrollPosition >= projectsPosition && currentScrollPosition < guidesPosition) {
         setIsActiveAboutMe(false);
         setIsActiveProjects(true);
+        setIsActiveGuides(false)
+      } else if (currentScrollPosition >= guidesPosition) {
+        setIsActiveAboutMe(false);
+        setIsActiveProjects(false);
+        setIsActiveGuides(true)
       } else {
         setIsActiveAboutMe(false);
         setIsActiveProjects(false);
@@ -55,7 +64,7 @@ const AsideComponent = () => {
             <div className="aside-line"></div>
             <span>{texts.asideProjects}</span>
         </div>
-        <div className="aside-item"
+        <div className={`aside-item ${isActiveGuides ? 'isactive' : ''}`}
         onClick={()=>handleClick('guidesSection')}
         >
             <div className="aside-line"></div>

@@ -1,9 +1,12 @@
 .projects{
     max-width: min(1024px, 97dvw);
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
     h3{
         margin-top: 4rem;
-        margin-bottom: 2rem;
+        margin-bottom: -1rem;
         text-align: center;
     }
     .project-item{
@@ -37,6 +40,10 @@
             .project-details{
                 width: 320px;
                 color: azure;
+                p{
+                    text-wrap: wrap;
+                    font-size: 0.8rem;
+                }
             }
             .project-info-footer{
                 display: flex;
@@ -69,9 +76,9 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                overflow: hidden;
                 img{
                     margin: 1rem 0;
-                    max-height: 260px;
                     border-radius: 10px;
                 }
             }
@@ -119,16 +126,24 @@
         }
         
     }
-    .novisible{
-        display: none;
+
+    /* transiciones */
+    .fade-enter{
+        opacity: 0;
     }
-    /* .project-item:hover{
-        transform: perspective(280px)
-                    rotateX(5deg)
-                    translateY(-5%);
-        background-color: ;
-        transition: all 0.3s ease-out;
-    } */
+    .fade-enter-active{
+        opacity: 1;
+    }
+    .fade-exit{
+        opacity: 1;
+    }
+    .fade-exit-active{
+        opacity: 0;
+    }
+    .fade-enter-active,
+    .fade-exit-active{
+        transition: all 300ms;
+    }
 }
 @media (min-width: 1024px) {
     .projects{

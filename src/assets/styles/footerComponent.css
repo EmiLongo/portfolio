@@ -1,0 +1,27 @@
+footer{
+    position: relative;
+    margin-top: 3rem;
+    .footer-bg{
+        position: absolute;
+        bottom: 0;
+        width: 120%;
+        height: 4em;
+        background-color: var(--color-bg-primary);
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        opacity: 0.5;
+        transform: translate(-10%, 1em);
+    
+    }
+    .footer-container{
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (minwidth: 1024px) {
+    footer{
+        transform: translateY(1em);
+    }
+}

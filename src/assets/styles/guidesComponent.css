@@ -1,0 +1,47 @@
+.guides{
+    h3{
+        margin-top: 5rem;
+    }
+    .guide-card{
+        border: 1px solid transparent;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        aspect-ratio: 1/1;
+        background-image: linear-gradient(to right top, #2a3942, #2d3c45, #303e47, #33414a, #36444d);
+        box-shadow:  -10px -10px 16px #344752,
+        16px 16px 26px #202b32;
+        overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease-out;
+        img{
+            height: 70%;
+        }
+        p{  
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            height: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-wrap: wrap;
+        }
+    }
+    .guide-card:hover{
+        transform: perspective(280px)
+                    rotateX(5deg)
+                    translateY(-5%);
+        border: 1px solid #00ff6a;
+        transition: all 0.3s ease-out;
+    }
+}
+@media (min-width: 1024px) {
+    .guide-card-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem
+    }
+}

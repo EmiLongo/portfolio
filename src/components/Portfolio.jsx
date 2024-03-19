@@ -11,16 +11,18 @@ import { LanguageProvider } from "../assets/context/LanguageContext"
 const Portfolio = () => {
   return (
     <div className="portfolio">
-        <h1>Desarrolador Web en Rosario, Emiliano Longo</h1>
+        <h1>Desarrolador Web en Rosario, Argentina, Emiliano Longo</h1>
         <LanguageProvider>
           <NavBarComponent />
-          <HeroComponent />
           <AsideComponent />
-          <AboutMeComponent />
-        </LanguageProvider>
-          <ProjectsComponent />
-          <GuidesComponent />
+          <main>
+            <HeroComponent />
+            <AboutMeComponent />
+            <ProjectsComponent />
+            <GuidesComponent />
+          </main>
           <FooterComponent />
+        </LanguageProvider>
           <ArrowComponent />
     </div>
   )

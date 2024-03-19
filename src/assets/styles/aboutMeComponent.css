@@ -1,18 +1,19 @@
 .aboutme{
     h3{
-        text-align: center;
+        margin-bottom: 0;
     }
-    .aboutme-text{
-        width: max(320px, 50%);
-        
-        h4{
-            color: #00ff6a;
-            margin: 0;
-        }
+    h4{
+        color: #00ff6a;
+        margin-bottom: 2rem;
+        text-align: center;
         i{
             font-style: normal;
             color: azure;
         }
+    }
+    .aboutme-text{
+        width: calc(620px);
+        
         p{
             font-size: 0.8rem;
             text-wrap: balance;
