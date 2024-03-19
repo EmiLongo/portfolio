@@ -2,28 +2,133 @@
     max-width: min(1024px, 97dvw);
     margin: 0 auto;
     h3{
+        margin-top: 4rem;
+        margin-bottom: 2rem;
         text-align: center;
     }
-    .project-card{
-        display: flex;
-        gap: 1rem;
-        .project-details{
-            flex: 1;
-        }
-        .project-view{
-            flex: 1;
-        }
-        .project-imgs-body{
+    .project-item{
+        position: relative;
+        border-radius: 50px;
+        background-image: linear-gradient(to right top, #2a3942, #2d3c45, #303e47, #33414a, #36444d);
+        box-shadow:  -10px -10px 16px #344752,
+                    16px 16px 26px #202b32;
+        backdrop-filter: blur( 4px );
+        overflow: hidden;
+
+  
+        .project-info{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 78%;
+            height: 80%;
+            border-radius: 10px;
+            background: #182229d7;
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 4px );
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .project-details{
+                width: 320px;
+                color: azure;
+            }
+            .project-info-footer{
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
         }
-        .project-imgs-footer{
-            display: flex;
-            gap: 1rem;
-            img{
-                filter: invert(100%)
+        .project-card-header{
+            h4{
+                color: #00ff6a;
+                font-weight: 500;
+                text-align: center;
+                margin: 0;
+                padding-top: 1rem;
+            }
+            p{
+                text-align: center;
+                font-size: 0.8em;
+                margin: 0;
             }
         }
+        .project-card-body{
+                position: relative;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+            .project-imgs-body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    margin: 1rem 0;
+                    max-height: 260px;
+                    border-radius: 10px;
+                }
+            }
+            .project-imgs-header{
+                position: absolute;
+                left: 0.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1.5rem;
+                padding: 0.6rem;
+                img{
+                    filter: invert(100%);
+                    cursor: pointer;
+                }
+                img:hover{
+                    filter: invert(100%)
+                    drop-shadow(0 0 10px #00ff6a);
+                    transform: scale(1.2);
+                }
+            }
+
+            .project-imgs-footer{
+                position: absolute;
+                right: 0.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1.5rem;
+                padding: 0.6rem;
+                img{
+                    filter: invert(100%);
+                    cursor: pointer;
+                }
+                img:hover{
+                    filter: invert(100%)
+                    drop-shadow(0 0 10px #00ff6a);
+                    transform: scale(1.2);
+                }
+            }
+        }
+        
     }
+    .novisible{
+        display: none;
+    }
+    /* .project-item:hover{
+        transform: perspective(280px)
+                    rotateX(5deg)
+                    translateY(-5%);
+        background-color: ;
+        transition: all 0.3s ease-out;
+    } */
 }
 @media (min-width: 1024px) {
     .projects{

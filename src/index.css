@@ -13,12 +13,12 @@
     body{
       margin: 0;
       padding: 0;
-    }
-    .portfolio{
-
+      width: 100dvw;
       background-image: linear-gradient(to left top, #2a3942, #2d3d46, #30414b, #34454f, #374954,
        #364752, #34454f, #33434d, #2c3a44, #25323b, #1f2a32, #182229);
-
+    }
+    .portfolio{
+      width: 100dvw;
     }
     h1{
       transform: translateX(-150vw);
