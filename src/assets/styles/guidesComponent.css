@@ -1,6 +1,7 @@
 .guides{
     h3{
         margin-top: 5rem;
+        margin-bottom: 2rem;
     }
     .guide-card{
         border: 1px solid transparent;
@@ -30,6 +31,13 @@
             text-wrap: wrap;
         }
     }
+}
+@media (min-width: 1024px) {
+    .guide-card-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem
+    }
     .guide-card:hover{
         transform: perspective(280px)
                     rotateX(5deg)
@@ -38,10 +46,21 @@
         transition: all 0.3s ease-out;
     }
 }
-@media (min-width: 1024px) {
+@media (max-width: 1023.99px) and (min-width: 640px) {
     .guide-card-container{
+        width: 95dvw;
+        margin: 0 auto;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem
+    }
+}
+@media (max-width: 639.99px) {
+    .guide-card-container{
+        width: 95dvw;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 1rem
     }
 }

@@ -3,11 +3,14 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    /* gap: 4rem; */
     h3{
         margin-top: 4rem;
-        margin-bottom: -1rem;
+        margin-bottom: 2rem;
         text-align: center;
+    }
+    .void{
+        height: 4rem;
     }
     .project-item{
         position: relative;
@@ -148,6 +151,28 @@
 @media (min-width: 1024px) {
     .projects{
 
-        width: calc(620px);
+        width: 620px;
     }
+}
+@media (min-width: 640px) and (max-width: 1024px){
+    .projects{
+        width: 90dvw;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 639.99px) {
+    .projects{
+        width: 90dvw;
+        margin: 0 auto;
+        .project-card-body{
+            flex-direction: column;
+
+        }
+    }
+    .project-imgs-header,
+    .project-imgs-footer{
+        flex-direction: row;
+    }
+
+
 }

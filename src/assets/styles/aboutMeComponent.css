@@ -12,8 +12,6 @@
         }
     }
     .aboutme-text{
-        width: calc(620px);
-        
         p{
             font-size: 0.8rem;
             text-wrap: balance;
@@ -21,12 +19,29 @@
     }
 }
 @media (min-width: 1024px) {
-
+    
     .aboutme-text-container{
         display: flex;
-    justify-content: center;
+        justify-content: center;
     }
     .aboutme-text{
-        width: calc(640px + 1rem);
+        width: 620px;
+    }
+}
+@media (min-width: 640px) and (max-width: 1023.99px) {
+    .aboutme{
+        width: 95dvw;
+        margin: 0 auto;
+        padding-top: 4rem;
+        .aboutme-text{
+            margin: 0 3rem;
+        }
+    }
+}
+@media (max-width: 639.99px) {
+    .aboutme{
+        width: 95dvw;
+        margin: 0 auto;
+        padding-top: 3rem;
     }
 }

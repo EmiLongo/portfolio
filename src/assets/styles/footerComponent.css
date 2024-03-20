@@ -1,6 +1,7 @@
 footer{
     position: relative;
     margin-top: 3rem;
+    overflow: hidden;
     .footer-bg{
         position: absolute;
         bottom: 0;

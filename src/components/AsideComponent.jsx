@@ -9,7 +9,7 @@ const AsideComponent = () => {
 
   const handleClick = (id) => {
     const section = document.getElementById(id);
-    const sectionFixed = section.offsetTop - 3 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const sectionFixed = section.offsetTop - 4 * parseFloat(getComputedStyle(document.documentElement).fontSize);
     window.scrollTo({ top: sectionFixed, behavior: 'smooth' });
   };
 
@@ -17,9 +17,9 @@ const AsideComponent = () => {
     const aboutMeSection = document.getElementById('aboutMeSection');
     const projectsSection = document.getElementById('projectsSection');
     const guidesSection = document.getElementById('guidesSection');
-    const aboutMePosition = aboutMeSection.offsetTop - 6 * parseFloat(getComputedStyle(document.documentElement).fontSize);
-    const projectsPosition = projectsSection.offsetTop - 3 * parseFloat(getComputedStyle(document.documentElement).fontSize);
-    const guidesPosition = guidesSection.offsetTop - 3 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const aboutMePosition = aboutMeSection.offsetTop - 8 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const projectsPosition = projectsSection.offsetTop - 8 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const guidesPosition = guidesSection.offsetTop - 8 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
     const handleScroll = () => {
       const currentScrollPosition = window.scrollY;

@@ -28,14 +28,15 @@
     }
     h3{
       text-align: center;
-      margin-top: 3rem;
-      margin-bottom: 2rem;
     }
   }
 @media (min-width: 1024px) {
     main{
       transform: translateX(20dvw);
       width: 60dvw;
+    }
+    section{
+      margin-bottom: 4rem;
     }
     
 }

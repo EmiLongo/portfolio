@@ -43,8 +43,9 @@ const ProjectsComponent = () => {
   }
 
   return (
-    <section className="projects" id="projectsSection">
+    <section className="projects">
       <h3>{texts.projectsH3}</h3>
+      <i id="projectsSection"></i>
 
 
           <div className='project-item'>
@@ -105,6 +106,7 @@ const ProjectsComponent = () => {
        
           </div>
 
+          <div className='void'></div>
 
           <div className='project-item'>
             <div className='project-card-header'>

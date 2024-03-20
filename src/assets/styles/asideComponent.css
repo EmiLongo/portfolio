@@ -9,6 +9,7 @@ aside{
     gap: 1rem;
 
     .aside-item{
+        margin: 0.4em 0;
         display: flex;
         align-items: center;
         gap: 3px;

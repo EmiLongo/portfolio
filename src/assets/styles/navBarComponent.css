@@ -5,6 +5,7 @@
     width: 100vw;
     height: 3em;
     color: azure;
+    overflow: hidden;
         *{
             z-index: 9;
         }

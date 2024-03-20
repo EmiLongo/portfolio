@@ -21,8 +21,8 @@ const GuidesComponent = () => {
   const { texts } = useContext(LanguageContext);
 
   return (
-    <section className="guides" id="guidesSection">
-      <h3>{texts.guidesH3}</h3>
+    <section className="guides">
+      <h3>{texts.guidesH3}</h3><i id="guidesSection"></i>
       <div className="guide-card-container">
         <GuidesCardComponent
           key={1}
