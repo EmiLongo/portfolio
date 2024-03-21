@@ -5,6 +5,7 @@ import logoLinkedIn from '../assets/img/linkedin.svg'
 import cvemi from '../assets/CV-Emiliano Longo-SP-EN.pdf'
 import { useContext } from "react"
 import LanguageContext from "../assets/context/LanguageContext"
+import { GlowingButton } from '../assets/animations/GlowingButton/GlowingButton'
 const HeroComponent = () => {
   const { texts } = useContext(LanguageContext)
   return (
@@ -22,12 +23,15 @@ const HeroComponent = () => {
           <h2><i>{texts.heroTextH2I}</i> Emiliano Longo</h2>
           <h3>Front End <i>Developer</i></h3>
           <div className='hero-contact'>
-              <button onClick={()=>window.open(cvemi, '_blank')}>{texts.heroTextButton}</button>
+              {/* <button onClick={()=>window.open(cvemi, '_blank')}>{texts.heroTextButton}</button> */}
+              <GlowingButton
+                action={()=>window.open(cvemi, '_blank')}
+              >{texts.heroTextButton}</GlowingButton>
               <a href="https://github.com/EmiLongo">
-                <img src={logoGitHub} alt="Perfil GitHub" width='32' />
+                <img className='logo-github' src={logoGitHub} alt="Perfil GitHub" width='32' />
               </a>
               <a href="https://www.linkedin.com/in/emilianojlongo/">
-                <img src={logoLinkedIn} alt="Perfil LinkedIn" width='32' />
+                <img className='logo-linkedin' src={logoLinkedIn} alt="Perfil LinkedIn" width='32' />
               </a>
           </div>
         </div>

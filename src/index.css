@@ -19,6 +19,7 @@
     }
     .portfolio{
       width: 100dvw;
+      overflow: hidden;
     }
     h1{
       transform: translateX(-150vw);
@@ -26,11 +27,8 @@
       margin: 0;
       padding: 0;
     }
-    h3{
-      text-align: center;
-    }
   }
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
     main{
       transform: translateX(20dvw);
       width: 60dvw;

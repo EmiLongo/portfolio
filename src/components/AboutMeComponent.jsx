@@ -12,6 +12,7 @@ const AboutMeComponent = () => {
                 <p>{texts.aboutmeP1}</p>
                 <p>{texts.aboutmeP2}</p>
                 <p>{texts.aboutmeP3}</p>
+                <p>{texts.aboutmeP4}</p>
             </div>
         </div>
     </div>

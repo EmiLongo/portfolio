@@ -31,6 +31,10 @@
             position: fixed;
             font-family: "Roboto Mono", monospace;
             cursor: pointer;
+            transition: 0.3s all ease-out;
+        }
+        .nav-bar-logo:hover{
+            color: #00ff6a;
         }
         /* .nav-bar-contact{
             flex: 3;
@@ -96,7 +100,4 @@
              }
         }
 }
-@media (min-width: 1024px){
-
-
-}
+ 

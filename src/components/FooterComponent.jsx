@@ -1,6 +1,9 @@
 import { useContext } from 'react'
 import LanguageContext from '../assets/context/LanguageContext'
 import '../assets/styles/footerComponent.css'
+import '../assets/animations/GlowingButton/GlowingButton.css'
+import '../assets/animations/heartBeat.css'
+import { GlowingButton } from '../assets/animations/GlowingButton/GlowingButton'
 const FooterComponent = () => {
   const { texts } = useContext(LanguageContext)
 
@@ -13,23 +16,17 @@ const FooterComponent = () => {
             </div>
             <div className='footer-conect-right'>
               <p>{texts.footerP1}</p>
-
-              <button onClick={() => window.location.href = 'mailto:emi.longo@gmail.com'}
-                      className='gradient-border'
+              <GlowingButton 
+                    action={() => window.location.href = 'mailto:emi.longo@gmail.com'}
               >
                 {texts.footerButton}
-              </button>
-                {/* <!-- START Box --> */}
-              {/* <div className="center-box">
-                <div className="animated-border-box-glow"></div>
-                <div className="animated-border-box">
-                {texts.footerButton}
-                </div>
-              </div> */}
-                {/* <!-- END --> */}
+              </GlowingButton>
             </div>
         </div>
-        <p>{texts.footerP2}</p>
+        <p className='footer-legend'
+          onClick={() => {window.open("https://github.com/EmiLongo/portfolio", "_blank")}}
+        >
+        {texts.footerP2}</p>
       </div>
       {/* <div className='footer-bg'></div> */}
     </footer>
