@@ -34,7 +34,7 @@ const NavBar = () => {
                       })
                     } }
             >
-            emi.dev</div>
+            emi[dev]</div>
         </div>
         {/* <div className='nav-bar-contact'>
             <button>Descargar CV</button>

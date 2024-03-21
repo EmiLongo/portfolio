@@ -20,7 +20,10 @@ export const translation = {
         projectscard2H4: 'E-commerce del Emprendimiento',
         projectscard2details: 'Hice el diseño de branding. Creación de Contenidos e Imágenes, Estructura del Proyecto, SEO en el Rendimiento, Estilos con CSS, Responsive y Mobile First, Desarrollo JavaScript Vainilla.',
         guidesH3 : 'INSPIRACIÓN Y APRENDIZAJE',
-        footerP : 'Portfolio de Emiliano Longo, 2024',
+        footerH3 : '¡Conectemos!',
+        footerP1 : '¿Tienes algún proyecto en mente?',
+        footerP2 : 'Portfolio de Emiliano Longo, 2024',
+        footerButton: 'Enviar email'
     },
     EN: {
         heroTextH4: 'Hi!',
@@ -42,6 +45,9 @@ export const translation = {
         projectscard2H4: 'Entrepreneurship E-commerce',
         projectscard2details: 'I did the branding design. Content and Image Creation, Project Structure, SEO Performance, Styles with CSS, Responsive and Mobile First, Vanilla JavaScript Development',
         guidesH3 : 'INSPIRATION AND LEARNING',
-        footerP : `Emiliano Longo's Portfolio, 2024`,
+        footerH3 : `Let's Connect!`,
+        footerP1 : 'Are you minded a project?',
+        footerButton: 'Send email',
+        footerP2 : `Emiliano Longo's Portfolio, 2024`,
     }
 }

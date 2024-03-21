@@ -7,9 +7,31 @@ const FooterComponent = () => {
   return (
     <footer>
       <div className='footer-container'>
-        <p>{texts.footerP}</p>
+        <div className='footer-conect'>
+            <div className='footer-conect-left'>
+              <h2 className='heartbeat'>{texts.footerH3}</h2>
+            </div>
+            <div className='footer-conect-right'>
+              <p>{texts.footerP1}</p>
+
+              <button onClick={() => window.location.href = 'mailto:emi.longo@gmail.com'}
+                      className='gradient-border'
+              >
+                {texts.footerButton}
+              </button>
+                {/* <!-- START Box --> */}
+              {/* <div className="center-box">
+                <div className="animated-border-box-glow"></div>
+                <div className="animated-border-box">
+                {texts.footerButton}
+                </div>
+              </div> */}
+                {/* <!-- END --> */}
+            </div>
+        </div>
+        <p>{texts.footerP2}</p>
       </div>
-      <div className='footer-bg'></div>
+      {/* <div className='footer-bg'></div> */}
     </footer>
   )
 }

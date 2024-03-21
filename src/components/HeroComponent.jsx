@@ -22,9 +22,7 @@ const HeroComponent = () => {
           <h2><i>{texts.heroTextH2I}</i> Emiliano Longo</h2>
           <h3>Front End <i>Developer</i></h3>
           <div className='hero-contact'>
-              <a download='CV-Emiliano-Longo-ES-EN.pdf' href={cvemi}>
-                <button>{texts.heroTextButton}</button>
-              </a>
+              <button onClick={()=>window.open(cvemi, '_blank')}>{texts.heroTextButton}</button>
               <a href="https://github.com/EmiLongo">
                 <img src={logoGitHub} alt="Perfil GitHub" width='32' />
               </a>
