@@ -26,7 +26,7 @@ const GuidesComponent = () => {
       <div className="guide-card-container">
         <GuidesCardComponent
           key={1}
-          target=""
+          target="https://react.dev/"
           img={image1}
           description="React Documentation"
         />
@@ -91,6 +91,12 @@ const GuidesComponent = () => {
           description="CSS Hover Library"
         />
         <GuidesCardComponent
+          key={14}
+          target="https://www.svgrepo.com/"
+          img={image14}
+          description="Open-licensed SVG Icons"
+        />
+        <GuidesCardComponent
           key={12}
           target="https://www.youtube.com/@midulive"
           img={image12}
@@ -98,15 +104,9 @@ const GuidesComponent = () => {
         />
         <GuidesCardComponent
           key={13}
-          target=""
+          target="https://www.youtube.com/@SergieCode"
           img={image13}
           description="SERGIECODE - Tutoriales de Programación"
-        />
-        <GuidesCardComponent
-          key={14}
-          target="https://www.svgrepo.com/"
-          img={image14}
-          description="Open-licensed SVG Icons"
         />
       </div>
     </section>

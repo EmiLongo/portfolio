@@ -28,7 +28,6 @@ const FooterComponent = () => {
         >
         {texts.footerP2}</p>
       </div>
-      {/* <div className='footer-bg'></div> */}
     </footer>
   )
 }

@@ -41,6 +41,13 @@ const ProjectsComponent = () => {
   const handleInfo2 = () => {
     setIsInfo2(!isInfo2);
   };
+  const handleNextImg = (setCard, card) => {
+    if (card === 3){
+      setCard(1)
+    } else {
+      setCard(card + 1)
+    }
+  }
 
   return (
     <section className="projects">
@@ -98,6 +105,7 @@ const ProjectsComponent = () => {
                   loading="lazy"
                   alt="Kara desde Dispositivos"
                   height="260"
+                  onClick={()=>{handleNextImg(setCardView1, cardView1)}}
                 />
               </CSSTransition>
             </SwitchTransition>
@@ -202,6 +210,7 @@ const ProjectsComponent = () => {
                   loading="lazy"
                   alt="Mundo Adaptógenos desde Dispositivos"
                   height="260"
+                  onClick={()=>{handleNextImg(setCardView2, cardView2)}}
                 />
               </CSSTransition>
             </SwitchTransition>
