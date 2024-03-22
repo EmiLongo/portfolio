@@ -6,8 +6,11 @@ import cvemi from "../assets/CV-Emiliano Longo-SP-EN.pdf";
 import { useContext } from "react";
 import LanguageContext from "../assets/context/LanguageContext";
 import { GlowingButton } from "../assets/animations/GlowingButton/GlowingButton";
+import Typewriter from 'typewriter-effect';
+
 const HeroComponent = () => {
   const { texts } = useContext(LanguageContext);
+
   return (
     <div className="hero-component">
       <div className="hero-component-filter">
@@ -22,15 +25,27 @@ const HeroComponent = () => {
           </div>
         </div>
         <div className="hero-text">
-          <h4>{texts.heroTextH4}</h4>
+          <h4>
+            {texts.heroTextH4}</h4>
           <h2>
             <i>{texts.heroTextH2I}</i> Emiliano Longo
           </h2>
           <h3>
-            Front End <i>Developer</i>
+              <Typewriter
+              onInit={(typewriter) => {
+                typewriter.typeString('')
+                  .pauseFor(500)
+                  .typeString('Front End <i>Developer</i>')
+                  .start()
+                  ;
+              }}
+            />
           </h3>
+          {/* <h3>
+            Front End <i>Developer</i>
+          </h3> */}
+
           <div className="hero-contact">
-            {/* <button onClick={()=>window.open(cvemi, '_blank')}>{texts.heroTextButton}</button> */}
             <GlowingButton action={() => window.open(cvemi, "_blank")}>
               {texts.heroTextButton}
             </GlowingButton>
