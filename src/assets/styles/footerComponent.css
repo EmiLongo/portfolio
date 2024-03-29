@@ -46,6 +46,9 @@ footer{
             min-width: 320px;
             position: relative;
 
+            img{
+                cursor: pointer;
+            }
         }
         > p{
             margin: 2rem 0;
