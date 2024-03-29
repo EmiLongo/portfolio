@@ -1,0 +1,26 @@
+.loading-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    transform: translate(-50 -50);
+    background-color: var(--color-bg-primary);
+    transition: all 1 ease;
+    z-index: 11;
+    opacity: 1  ;
+
+}
+
+.no-visible{
+        position: fixed;
+        top: 0;
+        width: 0.1rem;
+        height: 0.1rem;
+        background-color: var(--color-bg-primary);
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        opacity: 0.5;
+        transform: translate(-30%, -3em);
+        transition: all 1s ease; 
+}

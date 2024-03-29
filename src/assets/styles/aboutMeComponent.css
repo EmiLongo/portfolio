@@ -15,7 +15,7 @@
     .aboutme-text{
         p{
             font-size: 0.8rem;
-            text-wrap: balance;
+            text-wrap: wrap;
         }
     }
 }
@@ -44,5 +44,8 @@
         width: 95dvw;
         margin: 0 auto;
         padding-top: 3rem;
+        .aboutme-text p{
+                padding: 0 1rem;
+            }
     }
 }

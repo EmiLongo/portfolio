@@ -3,7 +3,7 @@ import desktop from "../assets/img/projects/desktop.svg";
 import mobile from "../assets/img/projects/mobile.svg";
 import tablet from "../assets/img/projects/tablet.svg";
 import info from "../assets/img/projects/info.svg";
-import redirect from "../assets/img/projects/share-plane.svg";
+import redirect from "../assets/img/projects/web.svg";
 import github from "../assets/img/github.svg";
 import css from "../assets/img/projects/css.svg";
 import html from "../assets/img/projects/html.svg";

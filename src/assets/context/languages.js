@@ -24,7 +24,8 @@ export const translation = {
         footerH3 : '¡Conectemos!',
         footerP1 : '¿Tienes algún proyecto en mente?',
         footerP2 : 'Portfolio de Emiliano Longo, 2024',
-        footerButton: 'Enviar email'
+        footerButton: 'Enviar email',
+        footerSpan : 'Email copiado!'
     },
     EN: {
         heroTextH4: 'Hi!',
@@ -51,5 +52,7 @@ export const translation = {
         footerP1 : 'Are you minded a project?',
         footerButton: 'Send email',
         footerP2 : `Emiliano Longo's Portfolio, 2024`,
+        footerSpan : 'Email copied!'
+
     }
 }

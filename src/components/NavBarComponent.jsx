@@ -22,6 +22,7 @@ const NavBar = () => {
     handleLanguange(language); 
     setLanguageNext(nextLanguage);
   }
+
   return (
     <nav className="nav-bar">
         <div className='nav-bar-bg'></div>

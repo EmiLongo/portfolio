@@ -6,6 +6,7 @@ import ArrowComponent from "./ArrowComponent"
 import GuidesComponent from "./GuidesComponent"
 import FooterComponent from "./FooterComponent"
 import AsideComponent from "./AsideComponent"
+// import LoadingComponent from "./LoadingComponent"
 import { LanguageProvider } from "../assets/context/LanguageContext"
 
 const Portfolio = () => {
@@ -24,6 +25,7 @@ const Portfolio = () => {
           <FooterComponent />
         </LanguageProvider>
           <ArrowComponent />
+          {/* <LoadingComponent /> */}
     </div>
   )
 }
