@@ -1,4 +1,5 @@
 import "../assets/styles/guidesComponent.css";
+import { Tilt } from '@jdion/tilt-react'
 import { useContext } from "react";
 import LanguageContext from "../assets/context/LanguageContext";
 import image1 from "../assets/img/guides/image1.webp";
@@ -24,90 +25,118 @@ const GuidesComponent = () => {
     <section className="guides">
       <h3>{texts.guidesH3}</h3><i id="guidesSection"></i>
       <div className="guide-card-container">
-        <GuidesCardComponent
-          key={1}
-          target="https://react.dev/"
-          img={image1}
-          description="React Documentation"
-        />
-        <GuidesCardComponent
-          key={2}
-          target="https://tailwindcss.com/"
-          img={image2}
-          description="Tailwindcss - Framework Packed With Classes"
-        />
-        <GuidesCardComponent
-          key={3}
-          target="https://squoosh.app/"
-          img={image3}
-          description="Squoosh - Image Optimizer"
-        />
-        <GuidesCardComponent
-          key={4}
-          target="https://www.adobe.com/express/feature/image/remove-background"
-          img={image4}
-          description="Adobe Express - Background Remover"
-        />
-        <GuidesCardComponent
-          key={5}
-          target="https://firefly.adobe.com/"
-          img={image5}
-          description="Adobe Firefly - IA Text to Image"
-        />
-        <GuidesCardComponent
-          key={6}
-          target="https://worldvectorlogo.com/"
-          img={image6}
-          description="World Vector Logo - SVG Brand Logos"
-        />
-        <GuidesCardComponent
-          key={7}
-          target="https://9elements.github.io/fancy-border-radius/"
-          img={image7}
-          description="Fancy Border Radius - CSS Generator"
-        />
-        <GuidesCardComponent
-          key={8}
-          target="https://ui.glass/generator/"
-          img={image8}
-          description="Glass UI - Glassmorphism CSS Generator"
-        />
-        <GuidesCardComponent
-          key={9}
-          target="https://mycolor.space/gradient"
-          img={image9}
-          description="Color Space - Color Gradient Generator"
-        />
-        <GuidesCardComponent
-          key={10}
-          target="https://animate.style/"
-          img={image10}
-          description="Animate.css - Library of CSS Animation"
-        />
-        <GuidesCardComponent
-          key={11}
-          target="https://ianlunn.github.io/Hover/"
-          img={image11}
-          description="CSS Hover Library"
-        />
-        <GuidesCardComponent
-          key={14}
-          target="https://www.svgrepo.com/"
-          img={image14}
-          description="Open-licensed SVG Icons"
-        />
-        <GuidesCardComponent
-          key={12}
-          target="https://www.youtube.com/@midulive"
-          img={image12}
-          description="MIDUDEV - Streamings FullStack con JavaScript"
-        />
-        <GuidesCardComponent
-          key={13}
-          target="https://www.youtube.com/@SergieCode"
-          img={image13}
-          description="SERGIECODE - Tutoriales de Programación"
-        />
+        <Tilt>
+            <GuidesCardComponent
+              key={1}
+              target="https://react.dev/"
+              img={image1}
+              description="React Documentation"
+            />
+        </Tilt>
+        <Tilt>
+            <GuidesCardComponent
+              key={2}
+              target="https://tailwindcss.com/"
+              img={image2}
+              description="Tailwindcss - Framework Packed With Classes"
+            />
+        </Tilt>
+        <Tilt>
+            <GuidesCardComponent
+              key={3}
+              target="https://squoosh.app/"
+              img={image3}
+              description="Squoosh - Image Optimizer"
+            />
+        </Tilt>
+        <Tilt>
+            <GuidesCardComponent
+              key={4}
+              target="https://www.adobe.com/express/feature/image/remove-background"
+              img={image4}
+              description="Adobe Express - Background Remover"
+            />
+        </Tilt>
+        <Tilt>
+            <GuidesCardComponent
+              key={5}
+              target="https://firefly.adobe.com/"
+              img={image5}
+              description="Adobe Firefly - IA Text to Image"
+            />
+        </Tilt>
+        <Tilt>
+            <GuidesCardComponent
+              key={6}
+              target="https://worldvectorlogo.com/"
+              img={image6}
+              description="World Vector Logo - SVG Brand Logos"
+            />
+        </Tilt>
+        <Tilt>
+            <GuidesCardComponent
+              key={7}
+              target="https://9elements.github.io/fancy-border-radius/"
+              img={image7}
+              description="Fancy Border Radius - CSS Generator"
+            />
+        </Tilt>
+        <Tilt>
+            <GuidesCardComponent
+              key={8}
+              target="https://ui.glass/generator/"
+              img={image8}
+              description="Glass UI - Glassmorphism CSS Generator"
+            />
+        </Tilt>
+        <Tilt>
+            <GuidesCardComponent
+              key={9}
+              target="https://mycolor.space/gradient"
+              img={image9}
+              description="Color Space - Color Gradient Generator"
+            />
+        </Tilt>
+        <Tilt>
+            <GuidesCardComponent
+              key={10}
+              target="https://animate.style/"
+              img={image10}
+              description="Animate.css - Library of CSS Animation"
+            />
+        </Tilt>
+        <Tilt>
+            <GuidesCardComponent
+              key={11}
+              target="https://ianlunn.github.io/Hover/"
+              img={image11}
+              description="CSS Hover Library"
+            />
+        </Tilt>
+        <Tilt>
+            <GuidesCardComponent
+              key={14}
+              target="https://www.svgrepo.com/"
+              img={image14}
+              description="Open-licensed SVG Icons"
+            />
+        </Tilt>
+        <Tilt>
+            <GuidesCardComponent
+              key={12}
+              target="https://www.youtube.com/@midulive"
+              img={image12}
+              description="MIDUDEV - Streamings FullStack con JavaScript"
+            />
+        </Tilt>
+        <Tilt>
+            <GuidesCardComponent
+              key={13}
+              target="https://www.youtube.com/@SergieCode"
+              img={image13}
+              description="SERGIECODE - Tutoriales de Programación"
+            />
+        </Tilt>
       </div>
     </section>
   );
