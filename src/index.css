@@ -28,6 +28,13 @@
       padding: 0;
     }
   }
+
+  @media (min-width: 1400px) {
+    :root {
+      font-size: calc(16px + 0.65vw);
+    }
+}
+
 @media (min-width: 992px) {
     main{
       transform: translateX(20dvw);

@@ -98,8 +98,18 @@
     position: fixed;
     z-index: 1000;
 }
+
+@media (min-width: 1400px){
+    .img-profile{
+        width: 15dvw !important;
+    }
+}
+
 @media (min-width: 992px){
     .hero-component{
+        .img-profile{
+            width: 20dvw !important;
+        }
         .hero-component-filter  {
         flex-direction: row-reverse;
 

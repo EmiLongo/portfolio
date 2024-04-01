@@ -159,7 +159,13 @@
         right: 0.5rem;
     }
 }
-@media (min-width: 992px) {
+@media (min-width: 1340px) {
+    .projects{
+        width: 760px;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 992px) and (max-width: 1399.99) {
     .projects{
         width: 620px;
     }

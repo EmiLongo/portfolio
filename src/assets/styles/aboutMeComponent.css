@@ -19,7 +19,13 @@
         }
     }
 }
-@media (min-width: 992px) {
+@media (min-width: 1340px) {
+    .aboutme-text{
+        width: 760px;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 992px) and (max-width: 1399.99) {
     
     .aboutme-text-container{
         display: flex;
