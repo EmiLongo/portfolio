@@ -11,6 +11,9 @@ import javascript from "../assets/img/projects/javascript.svg";
 import react from "../assets/img/projects/react.svg";
 import tailwind from "../assets/img/projects/tailwind-css.svg";
 import vitejs from "../assets/img/projects/vitejs.svg";
+import desktopEureka from "../assets/img/projects/eureka-desktop.webp";
+import tabletEureka from "../assets/img/projects/eureka-mobile.webp";
+import mobileEureka from "../assets/img/projects/eureka-tablet.webp";
 import desktopKara from "../assets/img/projects/kara-desktop.webp";
 import mobileKara from "../assets/img/projects/kara-mobile.webp";
 import tabletKara from "../assets/img/projects/kara-tablet.webp";
@@ -23,7 +26,16 @@ import LanguageContext from "../assets/context/LanguageContext";
 
 const ProjectsComponent = () => {
   const { texts } = useContext(LanguageContext);
-  // project card1
+  // project card3
+  const [cardView3, setCardView3] = useState(1);
+  const [isInfo3, setIsInfo3] = useState(false);
+  const handleView3 = (position) => {
+    setCardView3(position);
+  };
+  const handleInfo3 = () => {
+    setIsInfo3(!isInfo3);
+  };
+  // project card2
   const [cardView1, setCardView1] = useState(1);
   const [isInfo1, setIsInfo1] = useState(false);
   const handleView1 = (position) => {
@@ -54,7 +66,112 @@ const ProjectsComponent = () => {
       <h3>{texts.projectsH3}</h3>
       <i id="projectsSection"></i>
 
-      {/* project card1 */}
+      {/* project card3 */}
+      <div className="project-item">
+        <div className="project-card-header">
+          <h4>{texts.projectscard3H4}</h4>
+          <p>{texts.projectscard3p}</p>
+        </div>
+        <div className="project-card-body">
+          <div className="project-imgs-header">
+            <img
+              src={info}
+              style={isInfo3 === true ? { filter: 'invert(100%) drop-shadow(0 0 10px #00ff6a)' } : {}}
+              loading="lazy"
+              alt="Info Proyecto"
+              width="32"
+              onClick={handleInfo3}
+            />
+              <img
+                src={redirect}
+                onClick={() => {window.open("https://s14-11-m-java-e5su.vercel.app/", "_blank")}}
+                loading="lazy"
+                alt="Demo del Proyecto"
+                width="32"
+              />
+              <img
+                src={github}
+                onClick={() => {window.open("https://github.com/No-Country/s14-11-m-java", "_blank")}}
+                loading="lazy"
+                alt="Código del Proyecto"
+                width="32"
+              />
+          </div>
+          <div className="project-imgs-body">
+            <SwitchTransition>
+              <CSSTransition
+                key={cardView3}
+                addEndListener={(node, done) =>
+                  node.addEventListener("transitionend", done, false)
+                }
+                classNames="fade"
+              >
+                <img
+                  src={
+                    cardView3 == 1
+                      ? desktopEureka
+                      : cardView3 == 2
+                      ? tabletEureka
+                      : mobileEureka
+                  }
+                  loading="lazy"
+                  alt="Eureka desde Dispositivos"
+                  height="260"
+                  onClick={()=>{handleNextImg(setCardView1, cardView1)}}
+                />
+              </CSSTransition>
+            </SwitchTransition>
+          </div>
+
+          <div className="project-imgs-footer">
+            <img
+              src={desktop}
+              style={cardView3 === 1 ? { filter: 'invert(100%) drop-shadow(0 0 10px #00ff6a)' } : {}}
+              loading="lazy"
+              alt="Vista desde Desktop"
+              width="32"
+              onClick={() => handleView3(1)}
+            />
+            <img
+              src={tablet}
+              style={cardView3 === 2 ? { filter: 'invert(100%) drop-shadow(0 0 10px #00ff6a)' } : {}}
+              loading="lazy"
+              alt="Vista desde Tablet"
+              width="32"
+              onClick={() => handleView3(2)}
+            />
+            <img
+              src={mobile}
+              style={cardView3 === 3 ? { filter: 'invert(100%) drop-shadow(0 0 10px #00ff6a)' } : {}}
+              loading="lazy"
+              alt="Vista desde Mobile"
+              width="32"
+              onClick={() => handleView3(3)}
+            />
+          </div>
+        </div>
+        {isInfo3 ? (
+          <div className="project-info">
+            <div className="project-details">
+              <p>{texts.projectscard3details}</p>
+            </div>
+            <div className="project-info-footer">
+              <img src={css} width="32" />
+              <img src={html} width="32" />
+              <img src={javascript} width="32" />
+              <img src={react} width="32" />
+              <img src={tailwind} width="32" />
+              <img src={vitejs} width="32" />
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
+
+      <div className="void"></div>
+
+      {/* project card2 */}
       <div className="project-item">
         <div className="project-card-header">
           <h4>{texts.projectscard1H4}</h4>
@@ -159,7 +276,7 @@ const ProjectsComponent = () => {
 
       <div className="void"></div>
 
-      {/* project card2 */}
+      {/* project card1 */}
       <div className="project-item">
         <div className="project-card-header">
           <h4>{texts.projectscard2H4}</h4>
