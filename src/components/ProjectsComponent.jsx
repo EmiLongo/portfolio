@@ -117,7 +117,7 @@ const ProjectsComponent = () => {
                   loading="lazy"
                   alt="Eureka desde Dispositivos"
                   height="260"
-                  onClick={()=>{handleNextImg(setCardView1, cardView1)}}
+                  onClick={()=>{handleNextImg(setCardView3, cardView3)}}
                 />
               </CSSTransition>
             </SwitchTransition>
