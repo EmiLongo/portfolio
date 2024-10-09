@@ -25,6 +25,7 @@
         .project-info{
             position: absolute;
             bottom: 0;
+            height: 95%;
             border-radius: 10px;
             background: #182229d7;
             box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
