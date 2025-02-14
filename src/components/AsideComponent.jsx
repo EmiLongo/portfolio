@@ -1,3 +1,4 @@
+// src/components/AsideComponent.jsx
 import { useState, useEffect, useContext } from 'react';
 import '../assets/styles/asideComponent.css'
 import LanguageContext from '../assets/context/LanguageContext'
@@ -6,6 +7,7 @@ const AsideComponent = () => {
   const [isActiveAboutMe, setIsActiveAboutMe] = useState(false);
   const [isActiveProjects, setIsActiveProjects] = useState(false);
   const [isActiveGuides, setIsActiveGuides] = useState(false);
+  const [isActiveExperience, setIsActiveExperience] = useState(false);
 
   const handleClick = (id) => {
     const section = document.getElementById(id);
@@ -17,28 +19,39 @@ const AsideComponent = () => {
     const aboutMeSection = document.getElementById('aboutMeSection');
     const projectsSection = document.getElementById('projectsSection');
     const guidesSection = document.getElementById('guidesSection');
+    const experienceSection = document.getElementById('experienceSection');
     const aboutMePosition = aboutMeSection.offsetTop - 8 * parseFloat(getComputedStyle(document.documentElement).fontSize);
     const projectsPosition = projectsSection.offsetTop - 8 * parseFloat(getComputedStyle(document.documentElement).fontSize);
     const guidesPosition = guidesSection.offsetTop - 8 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const experiencePosition = experienceSection.offsetTop - 8 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
     const handleScroll = () => {
       const currentScrollPosition = window.scrollY;
       
-      if (currentScrollPosition >= aboutMePosition && currentScrollPosition < projectsPosition) {
+      if (currentScrollPosition >= aboutMePosition && currentScrollPosition < experiencePosition) {
         setIsActiveAboutMe(true);
+        setIsActiveProjects(false);
+        setIsActiveGuides(false)
+        setIsActiveExperience(false)
+      } else if (currentScrollPosition >= experiencePosition && currentScrollPosition < projectsPosition) {
+        setIsActiveAboutMe(false);
+        setIsActiveExperience(true);
         setIsActiveProjects(false);
         setIsActiveGuides(false)
       } else if (currentScrollPosition >= projectsPosition && currentScrollPosition < guidesPosition) {
         setIsActiveAboutMe(false);
         setIsActiveProjects(true);
         setIsActiveGuides(false)
+        setIsActiveExperience(false)
       } else if (currentScrollPosition >= guidesPosition) {
         setIsActiveAboutMe(false);
         setIsActiveProjects(false);
         setIsActiveGuides(true)
+        setIsActiveExperience(false)
       } else {
         setIsActiveAboutMe(false);
         setIsActiveProjects(false);
+        setIsActiveExperience(false)
       }
     }
 
@@ -57,6 +70,12 @@ const AsideComponent = () => {
         >
             <div className="aside-line"></div>
             <span>{texts.asideAboutMe}</span>
+        </div>
+        <div className={`aside-item ${isActiveExperience ? 'isactive' : ''}`}
+          onClick={()=>handleClick('experienceSection')}
+        >
+            <div className="aside-line"></div>
+            <span>{texts.asideExperience}</span>
         </div>
         <div className={`aside-item ${isActiveProjects ? 'isactive' : ''}`}
           onClick={()=>handleClick('projectsSection')}
