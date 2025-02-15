@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { translation } from "./languages"
+import { translation } from "../helpers/languages"
 
 
 const initialLanguage = 'ES';
