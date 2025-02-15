@@ -69,25 +69,25 @@ const AsideComponent = () => {
           onClick={()=>handleClick('aboutMeSection')}
         >
             <div className="aside-line"></div>
-            <span>{texts.asideAboutMe}</span>
+            <span>{texts.aside.aboutMe}</span>
         </div>
         <div className={`aside-item ${isActiveExperience ? 'isactive' : ''}`}
           onClick={()=>handleClick('experienceSection')}
         >
             <div className="aside-line"></div>
-            <span>{texts.asideExperience}</span>
+            <span>{texts.aside.experience}</span>
         </div>
         <div className={`aside-item ${isActiveProjects ? 'isactive' : ''}`}
           onClick={()=>handleClick('projectsSection')}
         >
             <div className="aside-line"></div>
-            <span>{texts.asideProjects}</span>
+            <span>{texts.aside.projects}</span>
         </div>
         <div className={`aside-item ${isActiveGuides ? 'isactive' : ''}`}
         onClick={()=>handleClick('guidesSection')}
         >
             <div className="aside-line"></div>
-            <span>{texts.asideInspiration}</span>
+            <span>{texts.aside.inspiration}</span>
         </div>
     </aside>
   )
