@@ -2,7 +2,7 @@ import "../assets/styles/heroComponent.css";
 import emiliano from "../assets/img/emiliano.webp";
 import logoGitHub from "../assets/img/github.svg";
 import logoLinkedIn from "../assets/img/linkedin.svg";
-import cvemi from "../assets/CV-Emiliano Longo-SP-EN.pdf";
+import cvemi from "../assets/CV-Emiliano Longo.pdf";
 import { useContext } from "react";
 import LanguageContext from "../assets/context/LanguageContext";
 import { GlowingButton } from "../assets/animations/GlowingButton/GlowingButton";
@@ -37,9 +37,9 @@ const HeroComponent = () => {
         </div>
         <div className="hero-text">
           <h4>
-            {texts.heroTextH4}</h4>
+            {texts.hero.h4}</h4>
           <h2>
-            <i>{texts.heroTextH2I}</i> Emiliano Longo
+            <i>{texts.hero.h2I}</i> Emiliano Longo
           </h2>
           {/* <h3 className={loading ? 'loading-text' : ''}> */}
           <h3>
@@ -75,7 +75,7 @@ const HeroComponent = () => {
 
           <div className="hero-contact">
             <GlowingButton action={() => window.open(cvemi, "_blank")}>
-              {texts.heroTextButton}
+              {texts.hero.button}
             </GlowingButton>
               <img
                 className="logo-github"
