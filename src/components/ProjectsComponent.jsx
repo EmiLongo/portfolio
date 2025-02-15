@@ -1,97 +1,155 @@
 import "../assets/styles/projectsComponent.css";
-import desktopXYZ from "../assets/img/projects/xyz-block-desktop.webp";
-import tabletXYZ from "../assets/img/projects/xyz-block-tablet.webp";
-import mobileXYZ from "../assets/img/projects/xyz-block-mobile.webp";
-import desktopCW from "../assets/img/projects/cw-desktop.webp";
-import tabletCW from "../assets/img/projects/cw-tablet.webp";
-import mobileCW from "../assets/img/projects/cw-mobile.webp";
-import desktopEureka from "../assets/img/projects/eureka-desktop.webp";
-import tabletEureka from "../assets/img/projects/eureka-tablet.webp";
-import mobileEureka from "../assets/img/projects/eureka-mobile.webp";
-import desktopKara from "../assets/img/projects/kara-desktop.webp";
-import mobileKara from "../assets/img/projects/kara-mobile.webp";
-import tabletKara from "../assets/img/projects/kara-tablet.webp";
-import desktopMundo from "../assets/img/projects/mundo-desktop.webp";
-import mobileMundo from "../assets/img/projects/mundo-mobile.webp";
-import tabletMundo from "../assets/img/projects/mundo-tablet.webp";
-import { useContext } from "react";
+import desktop from "../assets/img/projects/desktop.svg";
+import mobile from "../assets/img/projects/mobile.svg";
+import tablet from "../assets/img/projects/tablet.svg";
+import info from "../assets/img/projects/info.svg";
+import redirect from "../assets/img/projects/web.svg";
+import github from "../assets/img/github.svg";
+import css from "../assets/img/projects/css.svg";
+import html from "../assets/img/projects/html.svg";
+import javascript from "../assets/img/projects/javascript.svg";
+import reactIcon from "../assets/img/projects/react.svg";
+import tailwind from "../assets/img/projects/tailwind-css.svg";
+import vitejs from "../assets/img/projects/vitejs.svg";
+import { useContext, useState } from "react";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 import LanguageContext from "../assets/context/LanguageContext";
+import { projectData } from "../assets/helpers/projects.mjs";
 import { ProjectCard } from "./ProjectCard";
 
 const ProjectsComponent = () => {
   const { texts } = useContext(LanguageContext);
 
-  const projects = [
-    {
-      title: texts.projectscard5H4,
-      description: texts.projectscard5p,
-      details: texts.projectscard5details,
-      images: [desktopXYZ, tabletXYZ, mobileXYZ],
-      links: [
-        { icon: "redirect", url: "https://clone-blockxyz.netlify.app/" },
-        { icon: "github", url: "https://github.com/EmiLongo/clone_of_blockxyz" },
-      ],
-      icons: {css: true, html: true, javascript: true, react: true, tailwind: true, netlify: true, vitejs: true},
-    },
-    {
-      title: texts.projectscard3H4,
-      description: texts.projectscard3p,
-      details: texts.projectscard3details,
-      images: [desktopEureka, tabletEureka, mobileEureka],
-      links: [
-        { icon: "redirect", url: "https://s14-11-m-java-e5su.vercel.app/" },
-        { icon: "github", url: "https://github.com/No-Country/s14-11-m-java" },
-      ],
-      icons: {css: true, html: true, javascript: true, react: true, tailwind: true, vercel: true, vitejs: true},
-    },
-    {
-      title: texts.projectscard4H4,
-      description: texts.projectscard4p,
-      details: texts.projectscard4details,
-      images: [desktopCW, tabletCW, mobileCW],
-      links: [
-        { icon: "redirect", url: "https://capybara-wars.com/" },
-        { icon: "github", url: "https://github.com/user/capybara-wars" },
-      ],
-      icons: {css: true, html: true, javascript: true, netlify: true, vitejs: true},
-    },
-    {
-      title: texts.projectscard1H4,
-      description: texts.projectscard1p,
-      details: texts.projectscard1details,
-      images: [desktopKara, tabletKara, mobileKara],
-      links: [
-        { icon: "redirect", url: "https://zara-clone-reactjs.netlify.app/" },
-        { icon: "github", url: "https://github.com/No-Country/c16-37-m-java-react/" },
-      ],
-      icons: {css: true, html: true, javascript: true, react: true, tailwind: true, netlify: true, vitejs: true},
-    },
-    {
-      title: texts.projectscard2H4,
-      description: texts.projectscard2p,
-      details: texts.projectscard2details,
-      images: [desktopMundo, tabletMundo, mobileMundo,],
-      links: [
-        { icon: "redirect", url: "https://mundoadaptogenos.netlify.app/" },
-        { icon: "github", url: "https://github.com/EmiLongo/mundoadaptogenos/" },
-      ],
-      icons: {css: true, html: true, javascript: true, netlify: true, vitejs: true},
-    },
-  ];
+  const [cardView, setCardView] = useState(Array(projectData.length).fill(1));
+  const [isInfo, setIsInfo] = useState(Array(projectData.length).fill(false));
+
+  const handleView = (index, position) => {
+    const newCardView = [...cardView];
+    newCardView[index] = position;
+    setCardView(newCardView);
+  };
+
+  const handleInfo = (index) => {
+    const newIsInfo = [...isInfo];
+    newIsInfo[index] = !newIsInfo[index];
+    setIsInfo(newIsInfo);
+  };
+
+  const handleNextImg = (index) => {
+    const newCardView = [...cardView];
+    newCardView[index] = cardView[index] === 3 ? 1 : cardView[index] + 1;
+    setCardView(newCardView);
+  };
 
   return (
     <section className="projects">
-      <h3>{texts.projectsH3}</h3>
+      <h3>{texts.projects.h3}</h3>
       <i id="projectsSection"></i>
 
-      {projects.map((project, index) => {
+      {/* {projectData.map((project, index) => {
         return (
           <ProjectCard
             key={index}
             projectInfo={project}
           />
         );
-      })}
+      })} */}
+
+      {projectData.map((project, index) => (
+        <div key={`project-${project.id}`}>
+          <div className="project-item">
+            <div className="project-card-header">
+              <h4>{texts.projects[`projectscard${project.id}`].h4}</h4>
+              <p>{texts.projects[`projectscard${project.id}`].p}</p>
+            </div>
+            <div className="project-card-body">
+              <div className="project-imgs-header">
+                <img
+                  src={info}
+                  style={isInfo[index] ? { filter: 'invert(100%) drop-shadow(0 0 10px #00ff6a)' } : {}}
+                  loading="lazy"
+                  alt="Info Proyecto"
+                  width="32"
+                  onClick={() => handleInfo(index)}
+                />
+                <img
+                  src={redirect}
+                  onClick={() => window.open(project.demoUrl, "_blank")}
+                  loading="lazy"
+                  alt="Demo del Proyecto"
+                  width="32"
+                />
+                <img
+                  src={github}
+                  onClick={() => window.open(project.githubUrl, "_blank")}
+                  loading="lazy"
+                  alt="Código del Proyecto"
+                  width="32"
+                />
+              </div>
+              <div className="project-imgs-body">
+                <SwitchTransition>
+                  <CSSTransition
+                    key={cardView[index]}
+                    addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
+                    classNames="fade"
+                  >
+                    <img
+                      src={project.images[cardView[index] - 1]}
+                      loading="lazy"
+                      alt={`Vista de ${texts.projects[`projectscard${project.id}`].h4} desde Dispositivos`}
+                      height="260"
+                      onClick={() => handleNextImg(index)}
+                    />
+                  </CSSTransition>
+                </SwitchTransition>
+              </div>
+              <div className="project-imgs-footer">
+                <img
+                  src={desktop}
+                  style={cardView[index] === 1 ? { filter: 'invert(100%) drop-shadow(0 0 10px #00ff6a)' } : {}}
+                  loading="lazy"
+                  alt="Vista desde Desktop"
+                  width="32"
+                  onClick={() => handleView(index, 1)}
+                />
+                <img
+                  src={tablet}
+                  style={cardView[index] === 2 ? { filter: 'invert(100%) drop-shadow(0 0 10px #00ff6a)' } : {}}
+                  loading="lazy"
+                  alt="Vista desde Tablet"
+                  width="32"
+                  onClick={() => handleView(index, 2)}
+                />
+                <img
+                  src={mobile}
+                  style={cardView[index] === 3 ? { filter: 'invert(100%) drop-shadow(0 0 10px #00ff6a)' } : {}}
+                  loading="lazy"
+                  alt="Vista desde Mobile"
+                  width="32"
+                  onClick={() => handleView(index, 3)}
+                />
+              </div>
+            </div>
+            {isInfo[index] ? (
+              <div className="project-info" onClick={() => handleInfo(index)}>
+                <div className="project-details">
+                  <p>{texts.projects[`projectscard${project.id}`].details}</p>
+                </div>
+                <div className="project-info-footer">
+                  <img src={html} alt="HTML" title="HTML" width="32" />
+                  <img src={css} alt="CSS" title="CSS" width="32" />
+                  <img src={javascript} alt="JavaScript" title="JavaScript" width="32" />
+                  <img src={reactIcon} alt="ReactJS" title="ReactJS" width="32" />
+                  <img src={tailwind} alt="Tailwind CSS" title="Tailwind CSS" width="32" />
+                  <img src={vitejs} alt="ViteJS" title="ViteJS" width="32" />
+                </div>
+              </div>
+            ) : null}
+          </div>
+          <div className="void"></div>
+        </div>
+      ))}
     </section>
   );
 };
