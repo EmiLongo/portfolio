@@ -1,3 +1,4 @@
+// src/components/GuidesComponent.jsx
 import "../assets/styles/guidesComponent.css";
 import { Tilt } from '@jdion/tilt-react'
 import { useContext } from "react";
@@ -23,7 +24,7 @@ const GuidesComponent = () => {
 
   return (
     <section className="guides">
-      <h3>{texts.guidesH3}</h3><i id="guidesSection"></i>
+      <h3>{texts.guides.h3}</h3><i id="guidesSection"></i>
       <div className="guide-card-container">
         <Tilt>
             <GuidesCardComponent
