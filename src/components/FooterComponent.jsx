@@ -30,25 +30,25 @@ const FooterComponent = () => {
       <div className='footer-container'>
         <div className='footer-conect'>
             <div className='footer-conect-left'>
-              <h2 className='heartbeat'>{texts.footerH3}</h2>
+              <h2 className='heartbeat'>{texts.footer.h3}</h2>
             </div>
             <div className='footer-conect-right'>
-              <p>{texts.footerP1}</p>
+              <p>{texts.footer.p1}</p>
               <GlowingButton 
                     action={() => window.location.href = 'mailto:emi.longo@gmail.com'}
               >
-                {texts.footerButton}
+                {texts.footer.button}
               </GlowingButton>
                 <div className='copyBtn'>
                   <img src={copy} alt="Copiar email" width='24' onClick={copyMail} />
-                  {alertMsg && <span>{texts.footerSpan}</span>}
+                  {alertMsg && <span>{texts.footer.span}</span>}
                 </div>
             </div>
         </div>
         <p className='footer-legend'
           onClick={() => {window.open("https://github.com/EmiLongo/portfolio", "_blank")}}
         >
-        {texts.footerP2}</p>
+        {texts.footer.p2}</p>
       </div>
     </footer>
   )
