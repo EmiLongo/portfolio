@@ -4,33 +4,106 @@
         margin-bottom: 2rem;
         text-align: center;
     }
+    .isMobile{
+        display: none;
+    }
+    .isNonMobile{
+        display: block;
+    }
     .timeline-container {
+        max-width: min(992px, 97dvw);
         display: flex;
         flex-direction: column;
         justify-content: center;
-
-        border-left: 2px solid #00ff6a;
+        margin-left: 3rem;
+        padding: 0;
         
-        
-        .timeline-item {
+        .timeline-top{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 20.6% 14.4% 65%;
             position: relative;
-            display: flex;
+        }
+        .timeline-top-point{
+            position: absolute;
+            top: -17.5px;
+            left: -15px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #00ff6a;
+            z-index: 1;
+        }
+        .timeline-bottom-point{
+            position: absolute;
+            bottom: -17.5px;
+            right: -15px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #00ff6a;
+            z-index: 1;
+        }
+        .timeline-bottom{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 20% 15% 65%;
+            position: relative;
+        }
+        .timeline-topline {
+            height: 40px;
+            border-top: 5px solid #00ff6a;
+            border-right: 5px solid #00ff6a;
+            border-radius: 0px 40px 0px 0px;
+        }
+
+        .timeline-bottomline {
+            height: 40px;
+            border-bottom: 5px solid #00ff6a;
+            border-left: 5px solid #00ff6a;
+            border-radius: 0px 0px 0px 40px;
+        }
+        .timeline-bottomline-two {
+            border-bottom: 5px solid #00ff6a;
+        }
+        .timeline-item {
+            width: 100%;
+            position: relative;
+            display: grid;
+            grid-template-columns: 20% 15% 65%;
         }
         
+        .date-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            img {
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                /* font-size: 0.6rem; */
+                font-size: medium;
+                margin: 0;
+            }
+            
+        }
         .timeline-point {
             position: relative;
             margin-bottom: 2rem;
         }
-
+        
         .point-container {
             display: flex;
             align-items: center;
-
+            border-left: 5px solid #00ff6a;
+            
             .line{
                 height: 2px;
                 width: 50px;
                 background-color: #00ff6a;
-    
             }
             .point {
                 width: 20px;
@@ -39,59 +112,108 @@
                 border-radius: 50%;
             }
         }
-
         
-				.item-content {
-					display: flex;
-					gap: 3rem;
-					padding: 20px;
-					background-image: linear-gradient(to right top, #2a3942, #2d3c45, #303e47, #33414a, #36444d);
-					box-shadow:  -5px -5px 8px #344752,
-											8px 8px 15px #202b3298;
-					border-radius: 5px;
-					color: azure;
-					padding: 1.75rem;
-					/* overflow-wrap: break-word; */
-					margin: 1rem;
-					margin-bottom: 20px;
-					border-radius: 6px;
-				
-					div:first-child {
-						display: flex;
-						flex-direction: column;
-						justify-content: center;
-						align-items: center;
-						width: 50px;
-
-						img {
-							margin-bottom: 1rem;
-						}
-
-						p {
-							font-size: 0.6rem;
-							margin: 0;
-						}
-					}
+        .item-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            background-image: linear-gradient(to right top, #2a3942, #2d3c45, #303e47, #33414a, #36444d);
+            box-shadow: -5px -5px 8px #344752,
+            8px 8px 15px #202b3298;
+            border-radius: 5px;
+            color: azure;
+            margin: 1rem;
+            margin-bottom: 20px;
+            border-radius: 6px;
         
-					h3 {
-							margin: 0;
-							font-weight: 500;
-							color: #00ff6a;
-					}
-					
-					p {
-							margin: 0.5rem 0 ;
-							font-size: 0.9rem;
-							color: azure;
-					}
+            h3 {
+                margin: 0;
+                font-weight: 500;
+                color: #00ff6a;
+            }
+            .timeline-item-description {
+                margin: 0.5rem 0 ;
+                font-size: 0.7rem;
+                color: azure;
+            }
+            
+            .timeline-item-location {
+                margin: 0 ;
+                font-size: 0.7rem;
+                color: azure;
+            }
+            .timeline-item-dates {
+                margin-bottom: 1rem ;
+                font-size: 0.7rem;
+                color: azure;
+            }
+            .timeline-item-img{
+                margin-top: 0.5rem;
+            }
+            .button-container{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
 
+
+                button{
+                    border-radius: 5px;
+                    background-color: transparent;
+                    color: #00ff6a;
+                    border: 1px solid #00ff6a;
+                }
+            }
         }
     }
 
 }
 
 @media (max-width: 639.99px) {
-    h3{
-        margin-top: 4rem;
+    .timeline {
+        width: 100%;
+        h3{
+            margin-top: 4rem;
+        }
+        
+        .isMobile{
+            display: block;
+        }
+        .timeline-container {
+            width: 97dvw;
+            padding: 0%;
+            margin: 0 auto;
+
+            .timeline-item {
+                width: 100%;
+                position: relative;
+                display: grid;
+                grid-template-columns: 10% 70%;
+            }
+            .point-container {
+                display: flex;
+                align-items: center;
+                border-left: 5px solid #00ff6a;
+                
+                .line{
+                    height: 2px;
+                    width: 20px;
+                    background-color: #00ff6a;
+                }
+                .point {
+                    width: 10px;
+                    height: 10px;
+                    background-color: #00ff6a;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .item-content{
+        width: 100%;
+    }
+    .isNonMobile {
+        display: none !important;
     }
 }
