@@ -23,6 +23,65 @@ export const translation = {
         },
         timeline:{
             h3: 'EXPERIENCIA',
+            experiences: {
+                becode:
+                {
+                  name: "BeCode",
+                  startDate: "2024-10",
+                  endDate: "Actual",
+                  location: "Colombia – Remoto",
+                  description: {
+                    0: "Desarrollo Front End de una Plataforma Educativa de Idiomas, implementando una arquitectura modular con React.js.",
+                    1: "Creación de componentes reutilizables para mejorar la mantenibilidad y escalabilidad del código.",
+                    2: "Gestión eficiente del estado global con Redux Toolkit y consumo de APIs REST.",
+                    3: "Configuración de enrutado dinámico con React Router DOM para mejorar la navegación.",
+                    4: "Personalización de componentes con Material UI, asegurando consistencia visual y accesibilidad.",
+                    5: "Implementación y optimización del despliegue en Vercel para entornos de desarrollo y producción.",
+                  },
+                },
+                qoop:
+                {
+                  name: "qoop.Ai",
+                  startDate: "2024-07",
+                  endDate: "2024-10",
+                  location: "Mexico – Remoto",
+                  description: {
+                    0: "Desarrollo y mantenimiento de una aplicación de asistencia personal con IA, utilizando React.js.",
+                    1: "Implementación de Redux Toolkit para una gestión de estado fluida y eficiente.",
+                    2: "Integración de APIs desarrolladas en FastAPI, optimizando la comunicación entre frontend y backend con Axios.",
+                    3: "Personalización avanzada de UI con Material UI, asegurando coherencia visual y experiencia de usuario optimizada.",
+                    4: "Configuración de React Router DOM para un enrutamiento dinámico e intuitivo.",
+                    5: "Despliegue automatizado en Vercel, garantizando estabilidad en producción.",
+                  },
+                },
+                nocountry:
+                {
+                  name: "No Country",
+                  startDate: "2024-07",
+                  endDate: "2024-10",
+                  location: "Argentina - Remoto",
+                  description: {
+                    0: "Simulación Laboral Grupal. Desarrollo de MVPs para proyectos innovadores.",
+                    1: "Implementación con React.js, Vite, Redux y React Router, optimizando rendimiento y desarrollo ágil.",
+                    2: "Aplicación de SEO técnico para mejorar la indexación y velocidad de carga.",
+                    3: "Diseño responsive con Tailwind CSS y arquitectura SPA (Single Page Application).",
+                    4: "Trabajo bajo metodologías ágiles (Scrum) y control de versiones con GitFlow.",
+                  },
+                },
+                mundoAdaptogenos:
+                {
+                  name: "Mundo Adaptógenos",
+                  startDate: "2024-07",
+                  endDate: "2024-10",
+                  location: "Argentina – Freelancer Remoto",
+                  description: {
+                    0: "Desarrollo de un e-commerce desde cero con JavaScript Vanilla.",
+                    1: "Optimización de SEO y rendimiento, mejorando tiempos de carga y accesibilidad.",
+                    2: "Diseño responsive con CSS puro bajo enfoque Mobile First.",
+                    3: "Despliegue en Netlify, asegurando estabilidad y disponibilidad del sitio.",
+                  },
+                },
+            }
         },
         projects: {
             h3: 'PROYECTOS',
@@ -85,9 +144,64 @@ export const translation = {
             p3: 'I constantly seek to update myself with new ideas to improve projects. I highly appreciate feedback.',
             p4: 'I focus on client requirements. I provide effective solutions tailored to their needs.'
         },
-        timeline:{
-            h3: 'EXPERIENCE',
-        },
+        timeline: {
+            h3: "EXPERIENCE",
+            experiences: {
+              becode: {
+                name: "BeCode",
+                startDate: "2024-10",
+                endDate: "Present",
+                location: "Colombia – Remote",
+                description: {
+                  0: "Front-End development of a Language Learning Platform, implementing a modular architecture with React.js.",
+                  1: "Created reusable components to improve code maintainability and scalability.",
+                  2: "Efficiently managed global state using Redux Toolkit and consumed REST APIs.",
+                  3: "Configured dynamic routing with React Router DOM to enhance navigation.",
+                  4: "Customized components with Material UI, ensuring visual consistency and accessibility.",
+                  5: "Implemented and optimized deployment on Vercel for development and production environments.",
+                },
+              },
+              qoop: {
+                name: "qoop.Ai",
+                startDate: "2024-07",
+                endDate: "2024-10",
+                location: "Mexico – Remote",
+                description: {
+                  0: "Developed and maintained a personal assistant application powered by AI using React.js.",
+                  1: "Implemented Redux Toolkit for smooth and efficient state management.",
+                  2: "Integrated APIs built with FastAPI, optimizing frontend-backend communication using Axios.",
+                  3: "Advanced UI customization with Material UI, ensuring visual coherence and an optimized user experience.",
+                  4: "Configured React Router DOM for dynamic and intuitive routing.",
+                  5: "Automated deployment on Vercel, ensuring production stability.",
+                },
+              },
+              nocountry: {
+                name: "No Country",
+                startDate: "2024-07",
+                endDate: "2024-10",
+                location: "Argentina – Remote",
+                description: {
+                  0: "Group Work Simulation. Developed MVPs for innovative projects.",
+                  1: "Implemented React.js, Vite, Redux, and React Router to optimize performance and agile development.",
+                  2: "Applied technical SEO to improve indexing and loading speed.",
+                  3: "Designed responsive layouts using Tailwind CSS and SPA (Single Page Application) architecture.",
+                  4: "Worked under agile methodologies (Scrum) and version control with GitFlow.",
+                },
+              },
+              mundoAdaptogenos: {
+                name: "Mundo Adaptógenos",
+                startDate: "2024-07",
+                endDate: "2024-10",
+                location: "Argentina – Freelancer Remote",
+                description: {
+                  0: "Developed an e-commerce platform from scratch using Vanilla JavaScript.",
+                  1: "Optimized SEO and performance, improving load times and accessibility.",
+                  2: "Designed a responsive layout with pure CSS using a Mobile-First approach.",
+                  3: "Deployed on Netlify, ensuring site stability and availability.",
+                },
+              },
+            },
+          },
         projects: {
             h3: 'PROJECTS',
             projectscard5: {
